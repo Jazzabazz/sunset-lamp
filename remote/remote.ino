@@ -80,11 +80,16 @@ void loop() {
       Serial.println('d');
       Serial.println(state);
 
-      switch (state) {
+      
+    }
+  }
+  delay(100);
+  switch (state) {
         case RED:
           for (int i = 0; i < NUMPIXELS; i++) {
             pixels.setPixelColor(i, pixels.Color(255, 0, 0));
             pixels.show();
+            delay(100);
           }
           break;
 
@@ -92,6 +97,7 @@ void loop() {
           for (int i = 0; i < NUMPIXELS; i++) {
             pixels.setPixelColor(i, pixels.Color(255, 50, 0));
             pixels.show();
+            delay(100);
           }
           break;
 
@@ -99,12 +105,14 @@ void loop() {
           for (int i = 0; i < NUMPIXELS; i++) {
             pixels.setPixelColor(i, pixels.Color(255, 100, 0));
             pixels.show();
+            delay(100);
           }
           break;
         case BRIGHTYELLOW:
           for (int i = 0; i < NUMPIXELS; i++) {
             pixels.setPixelColor(i, pixels.Color(255, 234, 0));
             pixels.show();
+            delay(100);
           }
           break;
 
@@ -112,6 +120,7 @@ void loop() {
           for (int i = 0; i < NUMPIXELS; i++) {
             pixels.setPixelColor(i, pixels.Color(51, 255, 57));
             pixels.show();
+            delay(100);
           }
           break;
 
@@ -119,6 +128,7 @@ void loop() {
           for (int i = 0; i < NUMPIXELS; i++) {
             pixels.setPixelColor(i, pixels.Color(0, 255, 0));
             pixels.show();
+            delay(100);
           }
           break;
 
@@ -126,6 +136,7 @@ void loop() {
           for (int i = 0; i < NUMPIXELS; i++) {
             pixels.setPixelColor(i, pixels.Color(0, 128, 128));
             pixels.show();
+            delay(100);
           }
           break;
 
@@ -133,6 +144,7 @@ void loop() {
           for (int i = 0; i < NUMPIXELS; i++) {
             pixels.setPixelColor(i, pixels.Color(0, 0, 255));
             pixels.show();
+            delay(100);
           }
           break;
 
@@ -140,6 +152,7 @@ void loop() {
           for (int i = 0; i < NUMPIXELS; i++) {
             pixels.setPixelColor(i, pixels.Color(70, 51, 255));
             pixels.show();
+            delay(100);
           }
           break;
 
@@ -147,6 +160,7 @@ void loop() {
           for (int i = 0; i < NUMPIXELS; i++) {
             pixels.setPixelColor(i, pixels.Color(132, 19, 240));
             pixels.show();
+            delay(100);
           }
           break;
 
@@ -154,6 +168,7 @@ void loop() {
           for (int i = 0; i < NUMPIXELS; i++) {
             pixels.setPixelColor(i, pixels.Color(255, 0, 255));
             pixels.show();
+            delay(100);
           }
           break;
 
@@ -161,6 +176,7 @@ void loop() {
           for (int i = 0; i < NUMPIXELS; i++) {
             pixels.setPixelColor(i, pixels.Color(255, 80, 205));
             pixels.show();
+            delay(100);
           }
           break;
 
@@ -168,6 +184,7 @@ void loop() {
           for (int i = 0; i < NUMPIXELS; i++) {
             pixels.setPixelColor(i, pixels.Color(255, 255, 255));
             pixels.show();
+            delay(100);
           }
           break;
 
@@ -189,6 +206,7 @@ void loop() {
           pixels.setPixelColor(14, pixels.Color(255, 0, 0));
           pixels.setPixelColor(15, pixels.Color(242, 64, 2));
           pixels.show();
+          delay(100);
           break;
 
         case RAINBOWGRADIENT:
@@ -197,7 +215,6 @@ void loop() {
               pixels.setPixelColor(i, colors[x]);
               pixels.show();
               delay(100);
-              if (x == 11) x = 0;
             }
           }
           break;
@@ -226,10 +243,8 @@ void loop() {
           for (int i = 0; i < NUMPIXELS; i++) {
             pixels.setPixelColor(i, pixels.Color(0, 0, 0));
             pixels.show();
+            delay(100);
           }
           break;
       }
-    }
-  }
-  delay(100);
 }
